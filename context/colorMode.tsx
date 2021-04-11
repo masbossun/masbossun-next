@@ -16,7 +16,6 @@ export const ColorModeProvider: FC = ({ children }) => {
   const [colorMode, setColorMode] = useState<ColorMode>("default");
 
   useEffect(() => {
-    console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
     if (
       localStorage.colorMode === "dark" ||
       (!("colorMode" in localStorage) &&
