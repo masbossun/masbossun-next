@@ -18,8 +18,8 @@ const Navbar = () => {
 const NavLogo = () => {
   return (
     <a href="/">
-      <div className="bg-black-primary dark:bg-white-secondary py-3 px-4">
-        <span className="font-monospace font-medium text-base leading-4 text-white-primary dark:text-black-primary">
+      <div className="bg-black-primary dark:bg-white-secondary py-2 px-3">
+        <span className="font-monospace font-medium text-sm leading-4 text-white-primary dark:text-black-primary">
           masbossun
         </span>
       </div>
@@ -34,7 +34,7 @@ const NavMenuButton: FC<{ onClick: () => void; isMenuShow: boolean }> = ({
   return (
     <button
       type="button"
-      className="text-black-primary dark:text-white-primary appearance-none absolute -right-2 p-2 rounded-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 z-10"
+      className="text-black-primary dark:text-white-primary appearance-none absolute -right-2 p-2 rounded-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 z-20"
       onClick={onClick}
     >
       <svg className="h-6 w-6 fill-current">
@@ -50,7 +50,7 @@ const NavMenuButton: FC<{ onClick: () => void; isMenuShow: boolean }> = ({
 
 const NavMenu = () => {
   return (
-    <div className="bg-white-primary dark:bg-black-primary fixed inset-0">
+    <div className="bg-white-primary dark:bg-black-primary fixed inset-0 z-10">
       <section className="flex flex-col h-screen justify-center px-6">
         <a
           href="/"

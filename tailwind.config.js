@@ -19,7 +19,6 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: "1.5rem",
-        sm: "0rem",
       },
     },
     extend: {
@@ -28,10 +27,13 @@ module.exports = {
         title: ['"Source Serif Pro"', "serif"],
         monospace: ['"DM Mono"', "monospace"],
       },
+      maxWidth: {
+        "page-title": "15ch",
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

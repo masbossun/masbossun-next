@@ -4,7 +4,7 @@ import matter from "gray-matter";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
-type Fields = "slug" | "content" | "date" | "author" | "title";
+type Fields = "slug" | "content" | "date" | "author" | "title" | "preview";
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -30,6 +30,10 @@ export function getPostBySlug(
 
     if (fields.includes("content")) {
       item = { ...item, content };
+    }
+
+    if (fields.includes("preview")) {
+      item = { ...item, preview: content.substring(0, 1000) };
     }
 
     return item;
