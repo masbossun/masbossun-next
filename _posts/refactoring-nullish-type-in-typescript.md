@@ -5,6 +5,10 @@ slug: refactoring-nullish-type-in-typescript
 author: Ryan Setiagi
 ---
 
+![Alexandre Lecocq](https://images.unsplash.com/photo-1571376254030-943e689e6d88?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80)
+
+<figcaption>Photo by <a href="https://unsplash.com/@alexfromindia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandre Lecocq</a> on <a href="https://unsplash.com/s/photos/safe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+
 On javascript we have two different nullish type which is `null` and `undefined`. These types basically have same meaning that value with these types doesn't contain anything or empty, but these two types have different behavior, maybe you can find the differences between these nullish type in somewhere else in the internet. My point is, when dealing with nullish type (especially on typescript), we need to handle all the variables to have something kind of fallback. For example,
 
 ```typescript

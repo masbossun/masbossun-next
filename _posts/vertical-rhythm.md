@@ -5,7 +5,9 @@ slug: vertical-rhythm
 author: Ryan Setiagi
 ---
 
-# Header 1
+![Helena Jankovičová Kováčová](https://images.unsplash.com/photo-1614951951198-d63497b40aaa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80)
+
+<figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
 
 Lorem [ipsum](https://www.lipsum.com/feed/html) dolor sit amet, consectetur adipiscing elit. Suspendisse nec suscipit nibh, et posuere felis. Mauris nec nulla molestie, tincidunt neque at, dictum nisi. Cras at neque nec magna finibus malesuada a sed orci. Nulla porta velit quis dignissim lacinia. **Nulla iaculis odio** id arcu iaculis egestas. Pellentesque lorem mi, dignissim sed elementum vel, mattis vitae odio. Mauris sed consequat magna. Nulla ut rutrum ante. Nam porta arcu tortor, id dapibus ligula convallis pulvinar. Donec pretium, purus nec volutpat ornare, dui nibh elementum mi, _vehicula_ semper nisi ex id elit. Maecenas sed purus efficitur, euismod felis et, fringilla est. Etiam vel sapien sit amet neque elementum finibus at non est. Maecenas a iaculis
 odio.
