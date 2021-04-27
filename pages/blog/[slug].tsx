@@ -40,12 +40,10 @@ const Page: NextPage<Props> = ({ post }) => {
         {format(post.date ? parseISO(post.date) : new Date(), "d/M/yyyy")} by{" "}
         {post.author}
       </span>
-      <main>
-        <article
-          className="prose md:prose-lg dark:prose-dark max-w-none"
-          dangerouslySetInnerHTML={{ __html: post.content ?? "" }}
-        />
-      </main>
+      <article
+        className="prose md:prose-lg dark:prose-dark max-w-none my-8"
+        dangerouslySetInnerHTML={{ __html: post.content ?? "" }}
+      />
       <h3 className="text-black-primary dark:text-white-primary my-6 p-6 text-center">
         ***
       </h3>
