@@ -42,7 +42,7 @@ module.exports = {
               textAlign: "center",
             },
             a: {
-              color: theme("colors.black-primary"),
+              color: theme("colors.accent-primary"),
             },
             "code::before": {
               content: "none",

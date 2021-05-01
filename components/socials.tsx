@@ -2,7 +2,7 @@ import Icon from "./icon";
 
 const Socials = () => {
   return (
-    <div className="flex flex-1 justify-center">
+    <div className="flex justify-center">
       <a
         href="https://linkedin.com/in/ryan-setiagi"
         className="mr-2 text-black-primary dark:text-white-primary"
