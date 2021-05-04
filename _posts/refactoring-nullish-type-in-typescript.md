@@ -3,6 +3,7 @@ title: Refactoring nullish type in Typescript
 date: "2020-06-10T07:06:00.000Z"
 slug: refactoring-nullish-type-in-typescript
 author: Ryan Setiagi
+git: https://github.com/masbossun/masbossun-next/blob/main/_posts/refactoring-nullish-type-in-typescript.md
 ---
 
 ![Alexandre Lecocq](https://images.unsplash.com/photo-1571376254030-943e689e6d88?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80)

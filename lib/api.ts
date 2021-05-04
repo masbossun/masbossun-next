@@ -4,7 +4,14 @@ import matter from "gray-matter";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
-type Fields = "slug" | "content" | "date" | "author" | "title" | "preview";
+type Fields =
+  | "slug"
+  | "content"
+  | "date"
+  | "author"
+  | "title"
+  | "preview"
+  | "git";
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);

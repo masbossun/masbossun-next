@@ -15,6 +15,7 @@ interface Props {
     slug?: string;
     author?: string;
     content?: string;
+    git?: string;
   };
   morePosts: any;
   preview: any;
@@ -50,7 +51,7 @@ const Page: NextPage<Props> = ({ post }) => {
       <section className="bg-white-secondary dark:bg-black-secondary p-6 -mx-6 md:mx-0 mb-20">
         <p className="text-black-primary dark:text-white-primary font-body">
           If you find any misleading information or grammar issue, feel free to
-          make corrections here.
+          make corrections <a href={post.git}>here</a>.
         </p>
       </section>
       <Footer />
@@ -64,6 +65,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     "slug",
     "content",
     "author",
+    "git",
   ]);
   const content = await markdownToHtml(post?.content ?? "");
 

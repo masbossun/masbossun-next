@@ -3,6 +3,7 @@ title: How I Setup My vscode
 date: "2019-01-31T14:33:10.059Z"
 slug: how-i-setup-my-vscode
 author: Ryan Setiagi
+git: https://github.com/masbossun/masbossun-next/blob/main/_posts/how-i-setup-my-vscode.md
 ---
 
 Visual Studio Code is my favorite code editor right now. I always use it for writing code. I have been using vscode for almost 3 years. At my usage, i setup this code editor for developing JavaScript. For someone who do not know what vscode is, here is a paragraph from it's [website](https://code.visualstudio.com/docs).

@@ -3,6 +3,7 @@ title: My Linux Environment
 date: "2019-01-19T23:03:03.284Z"
 slug: my-linux-environment
 author: Ryan Setiagi
+git: https://github.com/masbossun/masbossun-next/blob/main/_posts/my-linux-environment.md
 ---
 
 On this post i would like to tell you about my environment and experience of using linux system operations. I have been using linux as my daily basis operating system for about 6 months from 2018. Actually i used to use windows-based operating system for about 8 years, from **windows xp** to **seven** to **8** to **8.1** and lastly **windows 10**. But in the middle year of 2016 i learned another operating system with \*NIX based kernel called Linux. My first linux distro that i dual-booted to my disk is Ubuntu (_i forgot the version of it_). Since then i get used to using terminal and get rid all of the GUI-things and change to CLI and i feel more powerful at that time, and that is true because i am feeling just like hacker (_LOL, all geeky kid dreams_).
