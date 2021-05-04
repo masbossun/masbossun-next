@@ -1,17 +1,26 @@
 import { FC, useState } from "react";
 import { useColorMode } from "../context/colorMode";
+import useWindowSize from "../hooks/useWindowSize";
+import Icon from "./icon";
 import Socials from "./socials";
 
 const Navbar = () => {
+  const size = useWindowSize();
   const [isMenuShow, setMenuShow] = useState(false);
 
   return (
-    <nav className="flex flex-row items-center py-4 relative">
+    <nav className="flex flex-row items-center justify-between py-4 relative">
       <NavLogo />
-      <NavMenuButton
-        onClick={() => setMenuShow((e) => !e)}
-        isMenuShow={isMenuShow}
-      />
+      {size ? (
+        size.width >= 640 ? (
+          <NavLinks />
+        ) : (
+          <NavMenuButton
+            onClick={() => setMenuShow((e) => !e)}
+            isMenuShow={isMenuShow}
+          />
+        )
+      ) : null}
       {isMenuShow ? <NavMenu /> : null}
     </nav>
   );
@@ -20,12 +29,58 @@ const Navbar = () => {
 const NavLogo = () => {
   return (
     <a href="/">
-      <div className="bg-black-primary dark:bg-white-secondary py-2 px-3">
-        <span className="font-monospace font-medium text-sm leading-4 text-white-primary dark:text-black-primary">
+      <div className="bg-black-primary dark:bg-white-secondary px-4 py-2">
+        <span className="font-monospace font-medium text-base text-white-primary dark:text-black-primary">
           masbossun
         </span>
       </div>
     </a>
+  );
+};
+
+const NavLinks: FC = () => {
+  const { colorMode, setColorMode } = useColorMode();
+
+  const toggleColorMode = () => {
+    if (colorMode === "dark") {
+      return setColorMode("light");
+    }
+    return setColorMode("dark");
+  };
+
+  return (
+    <div className="flex items-center">
+      <nav className="py-3 px-4">
+        <a
+          href="/blog"
+          className="font-monospace font-medium text-base leading-4 text-black-primary dark:text-white-primary"
+        >
+          blog
+        </a>
+      </nav>
+      <nav className="py-3 px-4">
+        <a
+          href="/works"
+          className="font-monospace font-medium text-base leading-4 text-black-primary dark:text-white-primary"
+        >
+          works
+        </a>
+      </nav>
+      <nav className="py-3 px-4">
+        <a
+          href="/contacts"
+          className="font-monospace font-medium text-base leading-4 text-black-primary dark:text-white-primary"
+        >
+          contacts
+        </a>
+      </nav>
+      <button
+        className=" text-black-primary dark:text-white-primary"
+        onClick={toggleColorMode}
+      >
+        <Icon icon="moon" height={20} width={20} className="h-5 w-5" />
+      </button>
+    </div>
   );
 };
 

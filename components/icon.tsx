@@ -6,15 +6,23 @@ export type IconNames =
   | "twitter_solid"
   | "instagram_alt_solid"
   | "linkedin_solid"
-  | "github_solid";
+  | "github_solid"
+  | "sun"
+  | "moon";
 
 const Icon: FC<{
   icon: IconNames;
   className?: SVGAttributes<SVGSVGElement>["className"];
-}> = ({ icon, className }) => {
+  width: number;
+  height: number;
+}> = ({ icon, className, width, height }) => {
   return (
     <svg className={`fill-current ${className}`}>
-      <use xlinkHref={`/images/icons.svg#${icon}`} />
+      <use
+        xlinkHref={`/images/icons.svg#${icon}`}
+        width={width}
+        height={height}
+      />
     </svg>
   );
 };

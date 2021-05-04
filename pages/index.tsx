@@ -9,7 +9,7 @@ export default function Home() {
         <Navbar />
       </header>
       <main>
-        <h1 className="text-black-primary dark:text-white-primary my-20 max-w-page-title">
+        <h1 className="text-black-primary dark:text-white-primary my-20 md:my-40 max-w-page-title">
           As a software developer, ryan does his works with passion
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -42,7 +42,7 @@ export default function Home() {
             />
           </WorkImages>
         </div>
-        <div className="my-20 prose md:prose-lg dark:prose-dark max-w-none">
+        <div className="my-20 md:my-40 prose md:prose-lg dark:prose-dark max-w-none">
           <p>
             His name is Ryan Setiagi, he currently working as a fulltime mobile
             developer at <a href="https://rukita.co">rukita</a>. basically he

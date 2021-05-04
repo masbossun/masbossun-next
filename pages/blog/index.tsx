@@ -23,7 +23,7 @@ const Page: NextPage<Props> = ({ posts }) => {
         <Navbar />
       </header>
       <main>
-        <h1 className="text-black-primary dark:text-white-primary my-20 max-w-page-title">
+        <h1 className="text-black-primary dark:text-white-primary my-20 md:my-40 max-w-page-title">
           Ryan usually wrote something here, blog, article, etc, you name it
         </h1>
         <ol>
@@ -72,7 +72,7 @@ const BlogPost: FC<{
       </p>
       <div className="h-6" />
       <a href={href ?? "#"}>
-        <div className="inline-flex bg-white-secondary dark:bg-accent-primary text-black-primary dark:text-white-primary py-3 px-4 rounded-none font-monospace font-medium text-sm">
+        <div className="inline-flex bg-accent-primary dark:bg-accent-primary text-black-primary dark:text-white-primary py-3 px-4 rounded-none font-monospace font-medium text-sm">
           read more
         </div>
       </a>
