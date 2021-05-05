@@ -19,30 +19,30 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <WorkImages>
             <img
-              src="/images/works/works-rekber.png"
+              src="/images/works/works-rekber.webp"
               alt="rekber"
-              srcSet="/images/works/works-rekber.png, /images/works/works-rekber@2x.png 2x, /images/works/works-rekber@3x.png 3x"
+              srcSet="/images/works/works-rekber.webp, /images/works/works-rekber@2x.webp 2x, /images/works/works-rekber@3x.webp 3x"
             />
           </WorkImages>
           <WorkImages>
             <img
-              src="/images/works/works-winsen.png"
+              src="/images/works/works-winsen.webp"
               alt="winsen"
-              srcSet="/images/works/works-winsen.png, /images/works/works-winsen@2x.png 2x, /images/works/works-winsen@3x.png 3x"
+              srcSet="/images/works/works-winsen.webp, /images/works/works-winsen@2x.webp 2x, /images/works/works-winsen@3x.webp 3x"
             />
           </WorkImages>
           <WorkImages>
             <img
-              src="/images/works/works-bukom-digital.png"
+              src="/images/works/works-bukom-digital.webp"
               alt="bukom-digital"
-              srcSet="/images/works/works-bukom-digital.png, /images/works/works-bukom-digital@2x.png 2x, /images/works/works-bukom-digital@3x.png 3x"
+              srcSet="/images/works/works-bukom-digital.webp, /images/works/works-bukom-digital@2x.webp 2x, /images/works/works-bukom-digital@3x.webp 3x"
             />
           </WorkImages>
           <WorkImages>
             <img
-              src="/images/works/works-hijrah.png"
+              src="/images/works/works-hijrah.webp"
               alt="hijrah"
-              srcSet="/images/works/works-hijrah.png, /images/works/works-hijrah@2x.png 2x, /images/works/works-hijrah@3x.png 3x"
+              srcSet="/images/works/works-hijrah.webp, /images/works/works-hijrah@2x.webp 2x, /images/works/works-hijrah@3x.webp 3x"
             />
           </WorkImages>
         </div>
