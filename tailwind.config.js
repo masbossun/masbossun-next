@@ -64,6 +64,7 @@ module.exports = {
             "pre code": {
               fontFamily: theme("fontFamily.monospace")[0],
               fontWeight: 400,
+              lineHeight: 1,
             },
           },
         },

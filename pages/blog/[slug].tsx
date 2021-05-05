@@ -31,10 +31,10 @@ const Page: NextPage<Props> = ({ post }) => {
   return (
     <>
       <Head>
-        <title>{post.title} - masbossun</title>
+        <title>{post.title} | masbossun.dev</title>
       </Head>
       <Navbar />
-      <h1 className="text-black-primary dark:text-white-primary my-20 max-w-page-title">
+      <h1 className="text-black-primary dark:text-white-primary my-20 md:my-40 max-w-page-title">
         {post.title}
       </h1>
       <span className="text-black-primary dark:text-white-primary font-monospace font-medium text-xs opacity-50">

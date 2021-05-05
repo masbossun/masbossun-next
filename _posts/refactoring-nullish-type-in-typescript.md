@@ -43,7 +43,10 @@ interface ReponseDataType {
 interface ResponseType {
   id: number;
   status: string;
-  data: ResponseDataType | null | undefined;
+  data:
+    | ResponseDataType
+    | null
+    | undefined;
 }
 
 const response: ResponseType = {
@@ -56,7 +59,9 @@ const response: ResponseType = {
   },
 };
 
-const getUserPhoneNumber = (data: ResponseDataType) => {
+const getUserPhoneNumber = (
+  data: ResponseDataType
+) => {
   return data.phone;
 };
 
@@ -66,7 +71,12 @@ getUserPhoneNumber(response.data); // 85123123123
 After we add type definitions, when we call `getUserPhoneNumber(response.data)`, typescript will tell us that `response.data` can be `undefined`, to fix this, we need to add nullish type inside function parameter.
 
 ```typescript
-const getUserPhoneNumber = (data: ResponseDataType | null | undefined) => {
+const getUserPhoneNumber = (
+  data:
+    | ResponseDataType
+    | null
+    | undefined
+) => {
   return data.phone;
 };
 ```
@@ -82,7 +92,10 @@ interface ReponseDataType {
 interface ResponseType {
   id: number;
   status: string;
-  data: ResponseDataType | null | undefined;
+  data:
+    | ResponseDataType
+    | null
+    | undefined;
 }
 
 const response: ResponseType = {
@@ -95,7 +108,12 @@ const response: ResponseType = {
   },
 };
 
-const getUserPhoneNumber = (data: ResponseDataType | null | undefined) => {
+const getUserPhoneNumber = (
+  data:
+    | ResponseDataType
+    | null
+    | undefined
+) => {
   if (data) {
     return data.phone;
   }
@@ -142,7 +160,9 @@ const response: ResponseType = {
   },
 };
 
-const getUserPhoneNumber = (data: Maybe<ResponseDataType>) => {
+const getUserPhoneNumber = (
+  data: Maybe<ResponseDataType>
+) => {
   if (data) {
     return data.phone;
   }
@@ -156,7 +176,9 @@ getUserPhoneNumber(response.data); // 85123123123
 Done, type definitions are more readable now. There is one more thing that we can do if we use typescript above `3.7` which is **optional chaining**, you can read more about this in [here](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html). It's useful if we want access value from nested object that can be null or undefined. In our case, it should be done like this.
 
 ```typescript
-const getUserPhoneNumber = (data: Maybe<ResponseDataType>) => {
+const getUserPhoneNumber = (
+  data: Maybe<ResponseDataType>
+) => {
   return data?.phone;
 };
 ```
