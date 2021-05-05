@@ -14,7 +14,7 @@ const ColorModeContext = createContext<ContextProps>(colorModeDefault);
 
 export const ColorModeProvider: FC = ({ children }) => {
   const [mounted, setMounted] = useState(false);
-  const [colorMode, setColorMode] = useState<ColorMode>("default");
+  const [colorMode, setColorMode] = useState<ColorMode | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -48,12 +48,14 @@ export const ColorModeProvider: FC = ({ children }) => {
   }, [colorMode]);
 
   const body = (
-    <ColorModeContext.Provider value={{ colorMode, setColorMode }}>
+    <ColorModeContext.Provider
+      value={{ colorMode: colorMode ?? "default", setColorMode }}
+    >
       {children}
     </ColorModeContext.Provider>
   );
 
-  if (!mounted) {
+  if (!mounted || !colorMode) {
     return <div style={{ visibility: "hidden" }}>{body}</div>;
   }
   return body;
