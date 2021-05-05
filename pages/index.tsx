@@ -8,6 +8,17 @@ export default function Home() {
     <>
       <Head>
         <title>masbossun.dev</title>
+        <meta property="og:title" content="masbossun.dev" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.masbossun.dev" />
+        <meta property="og:description" content="ryan's personal website" />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:creator" content="@masbossun" />
+        <meta property="twitter:title" content="masbossun.dev" />
+        <meta
+          property="twitter:description"
+          content="ryan's personal website"
+        />
       </Head>
       <header>
         <Navbar />
