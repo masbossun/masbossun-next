@@ -13,7 +13,12 @@ const colorModeDefault: ContextProps = {
 const ColorModeContext = createContext<ContextProps>(colorModeDefault);
 
 export const ColorModeProvider: FC = ({ children }) => {
+  const [mounted, setMounted] = useState(false);
   const [colorMode, setColorMode] = useState<ColorMode>("default");
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (
@@ -42,11 +47,16 @@ export const ColorModeProvider: FC = ({ children }) => {
     }
   }, [colorMode]);
 
-  return (
+  const body = (
     <ColorModeContext.Provider value={{ colorMode, setColorMode }}>
       {children}
     </ColorModeContext.Provider>
   );
+
+  if (!mounted) {
+    return <div style={{ visibility: "hidden" }}>{body}</div>;
+  }
+  return body;
 };
 
 export function useColorMode() {
