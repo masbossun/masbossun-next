@@ -1,5 +1,6 @@
 import { format, parseISO } from "date-fns";
 import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import { FC } from "react";
 import { Footer } from "../../components/footer";
 import Navbar from "../../components/navbar";
@@ -19,6 +20,9 @@ interface Props {
 const Page: NextPage<Props> = ({ posts }) => {
   return (
     <>
+      <Head>
+        <title>blog | masbossun.dev</title>
+      </Head>
       <header>
         <Navbar />
       </header>

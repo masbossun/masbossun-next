@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { FC } from "react";
 import { Footer } from "../components/footer";
 import Navbar from "../components/navbar";
@@ -5,6 +6,9 @@ import Navbar from "../components/navbar";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>masbossun.dev</title>
+      </Head>
       <header>
         <Navbar />
       </header>
@@ -44,22 +48,21 @@ export default function Home() {
         </div>
         <div className="my-20 md:my-40 prose md:prose-lg dark:prose-dark max-w-none">
           <p>
-            His name is Ryan Setiagi, he currently working as a fulltime mobile
-            developer at <a href="https://rukita.co">rukita</a>. basically he
-            does frontend development for web and also for mobile app. he quite
+            His name is Ryan Setiagi, he currently working as a full-time mobile
+            developer at <a href="https://rukita.co">rukita</a>. basically, he
+            does frontend development for the web and also for mobile app. Quite
             familiar with react environment such as{" "}
             <a href="https://reactjs.org">react js</a> and{" "}
-            <a href="https://reactnative.dev">react native</a>. not tied to
+            <a href="https://reactnative.dev">react native</a>. Not tied to
             exact same development or environment, he can explore another
-            frameworks and works with it if needed.
+            framework and works with it if needed.
           </p>
           <p>
-            He has been falling in love with programming since he was at
-            college, and coding is how he express his feelings. In the mean
-            time, he wrote some stuff on his blog. Just to keep his memory
-            sharp, in case he need it in the future. he has a great interests to
-            learning and building something new. If you intersted, feel free to
-            contact him.
+            For him programming is how he expresses his feelings. In the
+            meantime, he wrote some stuff on his <a href="/blog">blog</a>. Just
+            to keep his memory sharp, in case he needs it in the future. He has
+            a great interest in learning and building something new. If you are
+            interested, feel free to <a href="/contacts">contact</a> him.
           </p>
         </div>
       </main>
