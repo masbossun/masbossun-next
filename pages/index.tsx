@@ -73,8 +73,12 @@ export default function Home() {
 
 const WorkImages: FC = ({ children }) => {
   return (
-    <div className="aspect-w-1 aspect-h-1 bg-white-secondary dark:bg-black-secondary">
-      {children}
-    </div>
+    <a href="/works" className="group">
+      <div className="aspect-w-1 aspect-h-1 bg-white-secondary dark:bg-black-secondary overflow-hidden">
+        <div className="transform transition duration-500 ease-out group-hover:scale-105 group-hover:translate-x-3 group-hover:-translate-y-1 group-hover:bg-accent-primary dark:group-hover:bg-accent-secondary">
+          {children}
+        </div>
+      </div>
+    </a>
   );
 };

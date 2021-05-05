@@ -2,6 +2,9 @@ module.exports = {
   mode: "jit",
   purge: ["./pages/**/**.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
+  variants: {
+    extend: {},
+  },
   theme: {
     colors: {
       "black-primary": "var(--color-black-primary)",
@@ -110,9 +113,6 @@ module.exports = {
         },
       }),
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require("@tailwindcss/line-clamp"),

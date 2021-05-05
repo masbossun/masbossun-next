@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, HTMLAttributes, useState } from "react";
 import { useColorMode } from "../context/colorMode";
 import useWindowSize from "../hooks/useWindowSize";
 import Icon from "./icon";
@@ -50,30 +50,15 @@ const NavLinks: FC = () => {
 
   return (
     <div className="flex items-center">
-      <nav className="py-3 px-4">
-        <a
-          href="/blog"
-          className="font-monospace font-medium text-base leading-4 text-black-primary dark:text-white-primary"
-        >
-          blog
-        </a>
-      </nav>
-      <nav className="py-3 px-4">
-        <a
-          href="/works"
-          className="font-monospace font-medium text-base leading-4 text-black-primary dark:text-white-primary"
-        >
-          works
-        </a>
-      </nav>
-      <nav className="py-3 px-4">
-        <a
-          href="/contacts"
-          className="font-monospace font-medium text-base leading-4 text-black-primary dark:text-white-primary"
-        >
-          contacts
-        </a>
-      </nav>
+      <NavLink href="/blog" className="mr-2">
+        blog
+      </NavLink>
+      <NavLink href="/works" className="mr-2">
+        works
+      </NavLink>
+      <NavLink href="/contacts" className="mr-2">
+        contacts
+      </NavLink>
       <button
         className=" text-black-primary dark:text-white-primary"
         onClick={toggleColorMode}
@@ -165,6 +150,20 @@ const NavMenu = () => {
         </div>
       </section>
     </div>
+  );
+};
+
+const NavLink: FC<{
+  href: string;
+  className?: HTMLAttributes<HTMLAnchorElement>["className"];
+}> = ({ children, href, className }) => {
+  return (
+    <a
+      href={href}
+      className={`py-2 px-4 transition ease-out hover:bg-accent-primary text-black-primary hover:text-white-primary dark:hover:bg-accent-secondary dark:text-white-primary dark:hover:text-black-primary ${className}`}
+    >
+      <span className="font-monospace font-medium text-base">{children}</span>
+    </a>
   );
 };
 
