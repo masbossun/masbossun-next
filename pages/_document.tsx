@@ -16,6 +16,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link href="/themes/prism.css" rel="stylesheet" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -39,12 +40,11 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans&family=Source+Serif+Pro:wght@900&display=swap"
             rel="stylesheet"
           />
-          <link href="/themes/prism.css" rel="stylesheet" />
         </Head>
         <body className="container min-h-screen bg-white-primary dark:bg-black-primary">
+          <script src="/prism.js" />
           <Main />
           <NextScript />
-          <script src="/prism.js" />
         </body>
       </Html>
     );
