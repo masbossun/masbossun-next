@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, useState } from "react";
+import { FC, HTMLAttributes, useMemo, useState } from "react";
 import { useColorMode } from "../context/colorMode";
 import useWindowSize from "../hooks/useWindowSize";
 import Icon from "./icon";
@@ -48,6 +48,12 @@ const NavLinks: FC = () => {
     return setColorMode("dark");
   };
 
+  const icon = useMemo(() => {
+    if (colorMode === "dark") return "moon";
+    if (colorMode === "light") return "sun";
+    return "moon";
+  }, [colorMode]);
+
   return (
     <div className="flex items-center">
       <NavLink href="/blog" className="mr-2">
@@ -63,7 +69,7 @@ const NavLinks: FC = () => {
         className=" text-black-primary dark:text-white-primary"
         onClick={toggleColorMode}
       >
-        <Icon icon="moon" height={20} width={20} className="h-5 w-5" />
+        <Icon icon={icon} height={20} width={20} className="h-5 w-5" />
       </button>
     </div>
   );
