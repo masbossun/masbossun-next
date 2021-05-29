@@ -6,6 +6,11 @@ author: Ryan Setiagi
 git: https://github.com/masbossun/masbossun-next/blob/main/_posts/automate-app-center-upload-with-fastlane.md
 ---
 
+<figure>
+<img alt="Photo by @truemaulik on Unsplash" src="https://images.unsplash.com/photo-1563884072595-24a1d9dd5647?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1003&q=80" />
+<figcaption>Photo by <a href="https://unsplash.com/@truemaulik?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maulik Sutariya</a> on <a href="https://unsplash.com/s/photos/app?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+</figure>
+
 ## Table of content
 
 1. What is App Center
@@ -165,6 +170,13 @@ or
 bundle exec fastlane appcenter_staging
 ```
 
+After all process complete, fastlane will prompt the summary like this.
+
+<figure>
+<img alt="fastlane android summary" src="/images/post/fastlane-android-summary.png" />
+<figcaption>fastlane android summary</figcaption>
+</figure>
+
 ## App Center iOS Upload
 
 Creating automation on iOS is simple as we did on Android, but on iOS, we need extra actions to configure the signing process. Open Fastlane file on iOS directory `ios/fastlane/fastfile`, and put this code.
@@ -289,8 +301,15 @@ or
 bundle exec fastlane appcenter_staging
 ```
 
+After all process complete, fastlane will prompt the summary like this.
+
+<figure>
+<img alt="fastlane ios summary" src="/images/post/fastlane-ios-summary.png" />
+<figcaption>fastlane iOS summary</figcaption>
+</figure>
+
 ## Verdict
 
 This Fastlane automation really helped us remove the hassle compared to manually building and uploading each app to the appcenter. With this automation we are also integrating all signing process on iOS especially using only one account, it will make migration and/or onboarding easier. No need to manually setups certificates and provisioning profiles.
 
-Both Android and iOS processes took at least 7 to 8 minutes on my M1 Macbook Pro. With this automation, we can either run on our own machine or can integrate with CI/CD systems. We can also automate the build and upload to Google Play and Apple Appstore Connect for further implementation.
+Current build process took around 5 minutes for android and around 7 minutes for iOS on my M1 Macbook Pro. With this automation, we can either run on our own machine or can integrate with CI/CD systems. We can also automate the build and upload to Google Play and Apple Appstore Connect for further implementation.

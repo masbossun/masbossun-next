@@ -69,6 +69,9 @@ module.exports = {
               fontWeight: 400,
               lineHeight: 1,
             },
+            "figure > img": {
+              width: "100%",
+            },
           },
         },
         dark: {
