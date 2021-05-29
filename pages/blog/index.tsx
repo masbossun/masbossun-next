@@ -21,7 +21,7 @@ const Page: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>blog | masbossun.dev</title>
+        <title>blog — masbossun.dev</title>
       </Head>
       <header>
         <Navbar />

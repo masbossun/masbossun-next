@@ -5,7 +5,7 @@ const Contacts = () => {
   return (
     <>
       <Head>
-        <title>works | masbossun.dev</title>
+        <title>works — masbossun.dev</title>
       </Head>
       <header>
         <Navbar />
