@@ -56,7 +56,7 @@ module.exports = {
             "p > code": {
               paddingLeft: "4px",
               paddingRight: "4px",
-              overflowWrap: "break-word",
+              wordBreak: "break-all",
             },
             code: {
               fontFamily: theme("fontFamily.monospace")[0],
