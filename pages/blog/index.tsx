@@ -60,16 +60,16 @@ const BlogPost: FC<{
 }> = ({ href, title, author, date, preview }) => {
   return (
     <li className="py-10">
+      <span className="text-black-primary dark:text-white-primary font-monospace font-medium text-xs opacity-50">
+        {format(date ? parseISO(date) : new Date(), "d/M/yyyy")} by {author}
+      </span>
+      <div className="h-2" />
       <a
         href={href ?? "#"}
         className="text-black-primary dark:text-white-primary"
       >
         <h3>{title}</h3>
       </a>
-      <div className="h-2" />
-      <span className="text-black-primary dark:text-white-primary font-monospace font-medium text-xs opacity-50">
-        {format(date ? parseISO(date) : new Date(), "d/M/yyyy")} by {author}
-      </span>
       <div className="h-6" />
       <p className="text-black-primary dark:text-white-primary max-w-prose line-clamp-6">
         {preview}
