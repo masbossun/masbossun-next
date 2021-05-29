@@ -5,7 +5,7 @@ import { FC } from "react";
 import { Footer } from "../../components/footer";
 import Navbar from "../../components/navbar";
 import { getAllPosts } from "../../lib/api";
-import markdownToText from "../../lib/markdownToText";
+import markdownToPreview from "../../lib/markdownToPreview";
 
 interface Props {
   posts: ({
@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     getAllPosts(["slug", "title", "date", "author", "preview"]).map(
       async (S) => ({
         ...S,
-        preview: await markdownToText(S?.preview ?? ""),
+        preview: await markdownToPreview(S?.preview ?? ""),
       })
     )
   );

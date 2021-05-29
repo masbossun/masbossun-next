@@ -40,7 +40,7 @@ export function getPostBySlug(
     }
 
     if (fields.includes("preview")) {
-      item = { ...item, preview: content.substring(0, 1000) };
+      item = { ...item, preview: content };
     }
 
     return item;
