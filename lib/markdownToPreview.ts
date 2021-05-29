@@ -1,6 +1,6 @@
 import remark from "remark";
 import html from "remark-html";
-import strip from "remark-strip-html";
+const strip = require("remark-strip-html");
 
 export default async function markdownToPreview(markdown: string) {
   const result = await remark().use(html).process(markdown);
