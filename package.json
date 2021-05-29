@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "prepare": "husky install",
-    "lint:fix": "eslint --cache --cache-location '../.eslintcache/' --fix"
+    "lint:fix": "eslint --cache --cache-location '../.eslintcache/' --fix",
+    "poster": "node ./poster.js"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.0",
@@ -38,6 +39,7 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
+    "inquirer": "^8.1.0",
     "lint-staged": "^10.5.4",
     "postcss": "^8.2.9",
     "prettier": "2.2.1",
