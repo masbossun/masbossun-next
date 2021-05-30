@@ -112,30 +112,30 @@ const NavMenu = () => {
         <div className="flex flex-1 flex-col justify-center items-start">
           <a
             href="/"
-            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary"
+            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary py-4"
           >
             <h1>home</h1>
           </a>
           <a
             href="/blog"
-            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary"
+            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary py-4"
           >
             <h1>blog</h1>
           </a>
           <a
             href="/works"
-            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary"
+            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary py-4"
           >
             <h1>works</h1>
           </a>
           <a
             href="/contacts"
-            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary"
+            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary py-4"
           >
             <h1>contacts</h1>
           </a>
           <button
-            className="self-stretch text-left text-black-primary dark:text-white-primary"
+            className="self-stretch text-left text-black-primary dark:text-white-primary py-4"
             onClick={toggleColorMode}
           >
             <h1>
