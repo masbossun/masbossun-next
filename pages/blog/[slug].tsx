@@ -65,6 +65,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     "slug",
     "content",
     "author",
+    "date",
     "git",
   ]);
   const content = await markdownToHtml(post?.content ?? "");
