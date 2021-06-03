@@ -53,14 +53,13 @@ module.exports = {
             "code::after": {
               content: "none",
             },
-            "p > code": {
-              paddingLeft: "4px",
-              paddingRight: "4px",
-              wordBreak: "break-all",
-            },
             code: {
               fontFamily: theme("fontFamily.monospace")[0],
               fontWeight: 400,
+              paddingLeft: "4px",
+              paddingRight: "4px",
+              wordBreak: "break-all",
+              backgroundColor: theme("colors.white-secondary"),
             },
             pre: {
               backgroundColor: theme("colors.black-secondary"),
@@ -69,6 +68,10 @@ module.exports = {
               fontFamily: theme("fontFamily.monospace")[0],
               fontWeight: 400,
               lineHeight: 1,
+              paddingLeft: 0,
+              paddingRight: 0,
+              wordBreak: "normal",
+              backgroundColor: theme("colors.black-secondary"),
             },
             "figure > img": {
               width: "100%",
@@ -103,7 +106,7 @@ module.exports = {
             h5: {
               color: theme("colors.white-primary"),
             },
-            "p > code": {
+            code: {
               color: theme("colors.white-primary"),
               backgroundColor: theme("colors.black-secondary"),
             },

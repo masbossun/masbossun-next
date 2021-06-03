@@ -27,9 +27,9 @@ App Center is a platform to build, test, release and monitor apps. Like google p
 
 Before we can upload an app, we need to create an "app" inside the appcenter dashboard. This "app" might have different specs based on "operating system", "platform", and we can also specify the "Release Type" for each "app".
 
-Uploading an app in appcenter is quite simple, we just need to build and save the app file (.apk and .ipa) and then upload it to the appcenter. On the App Center dashboard, go to the **Distribute** → **Release** section, and then click **New Release**. Each operating system might have a different upload step, like on iOS and android, it has the same "Upload", "Write release notes", "Set destinations", and "Review uploads", but specifically on iOS we need to review "Destination's Devices" after setting destinations, to make sure all devices already provisioned with the correct profiles.
+Uploading an app in appcenter is quite simple, we just need to build and save the app file (.apk and .ipa) and then upload it to the appcenter. On the App Center dashboard, go to the "Distribute" → "Release" section, and then click "New Release". Each operating system might have a different upload step, like on iOS and android, it has the same "Upload", "Write release notes", "Set destinations", and "Review uploads", but specifically on iOS we need to review "Destination's Devices" after setting destinations, to make sure all devices already provisioned with the correct profiles.
 
-For Android App, after we build the APK file, on the **Release** section click **New Release**, select the apk file and upload, next write down the changes to the notes, and then choose the destinations, finally review the release and click the release button.
+For Android App, after we build the APK file, on the "Release" section click "New Release", select the apk file and upload, next write down the changes to the notes, and then choose the destinations, finally review the release and click the release button.
 
 For iOS App, after we build the IPA file, basically it has the same step, but as I mentioned in the previous slide, after selecting destinations, App Center will prompt the information about all the devices on the selected destinations. Finally, after everything is correct we can review and release the app.
 
@@ -41,9 +41,9 @@ Fastlane is a set of tools to automate builds, with a lot of plugins to help aut
 2. Sign the app
 3. Upload to App Center
 
-There are things to provide, which are **Apple Developer Account** the one-for-all account also used for generating profiles and a **Git repository** to store our certificates. Fastlane Match is a tool for managing code signing on iOS, it can generate, download, install all the things we need for code signing. With Fastlane Match, we don't need to worry about how to manage the certificates and provisioning. We only need to set up all the certificates once, after that we can use them for everyone without re-generating new certificates.
+There are things to provide, which are "Apple Developer Account" the one-for-all account also used for generating profiles and a "Git repository" to store our certificates. Fastlane Match is a tool for managing code signing on iOS, it can generate, download, install all the things we need for code signing. With Fastlane Match, we don't need to worry about how to manage the certificates and provisioning. We only need to set up all the certificates once, after that we can use them for everyone without re-generating new certificates.
 
-We also need to generate App Center API Token, this token is used later on App Center upload automation. To generate, go to [https://appcenter.ms/settings/apitokens](https://appcenter.ms/settings/apitokens#), click **New API Token** button, enter a bit of description and set the access to **Full Access**, finally click **Add new API Token**. You should copy and save this token right away, because after generating a token we can't access the token again.
+We also need to [generate App Center API Token](https://appcenter.ms/settings/apitokens#), this token is used later on App Center upload automation. Click "New API Token" button, enter a bit of description and set the access to "Full Access", finally click "Add new API Token". You should copy and save this token right away, because after generating a token we can't access the token again.
 
 #### Setup Fastlane
 
@@ -72,7 +72,7 @@ cd android
 fastlane init
 ```
 
-Fastlane CLI will prompt questions about our project like **App Package Name**, etc. After the process finished, there will be a new directory and files that we are going to set up later on.
+Fastlane CLI will prompt questions about our project like "App Package Name", etc. After the process finished, there will be a new directory and files that we are going to set up later on.
 
 #### Fastlane iOS Setups
 
@@ -89,7 +89,7 @@ The CLI will prompt the questions related to the apple developer account and als
 
 ## App Center Android Upload
 
-On previous slide, we want fastlane to just does three things, which are **build**, **sign**, and **upload**. Right now, we don't have anything setup on the script to automate the build and upload. Fastfile is where our automation scripts written, it doesn't have file format but basically it is written using Ruby programming language. Now, open `/android/fastlane/fastfile`.
+On previous slide, we want fastlane to just does three things, which are "build", "sign", and "upload". Right now, we don't have anything setup on the script to automate the build and upload. Fastfile is where our automation scripts written, it doesn't have file format but basically it is written using Ruby programming language. Now, open `/android/fastlane/fastfile`.
 
 ```ruby
 platform :android do
@@ -121,7 +121,7 @@ end
 
 On `gradle()` actions, it took some parameter that we need to specify. The `task` parameter is filled with one or more gradle task name, on our case, we need to clean the build folder with `clean` task and build apk file with `assemble` task. We also specify the `flavor` and `build_type` parameters because we have more than one environment. Some of the Fastlane actions will return variables after the process of the actions finished. On `gradle()` actions it returns several data like the path to apk or aab output file(s) that we will use on the upload process.
 
-The next things we need to do are **sign** and **upload.** Since the android signing process was done within gradle assemble, we don't need to do the manual signing. Thus, we can continue to the last step. To upload the APK, we will use a plugin called Fastlane Plugin Appcenter. The plugin is really straightforward, put `appcenter_upload()` actions block below the `gradle()` actions.
+The next things we need to do are "sign" and "upload." Since the android signing process was done within gradle assemble, we don't need to do the manual signing. Thus, we can continue to the last step. To upload the APK, we will use a plugin called Fastlane Plugin Appcenter. The plugin is really straightforward, put `appcenter_upload()` actions block below the `gradle()` actions.
 
 ```ruby
 platform :android do
