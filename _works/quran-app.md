@@ -1,7 +1,7 @@
 ---
 title: Quran App
 slug: quran-app
-category: "['UI Design']"
+category: "UI Design"
 ---
 
 Make it easy for everyone to deepen their faith. The Quran app is here to answer that. Anywhere in the best places we can read the verses of Allah.

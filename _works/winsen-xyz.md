@@ -1,7 +1,7 @@
 ---
 title: winsen.xyz
 slug: winsen-xyz
-category: "['Web Development']"
+category: "Web Development"
 ---
 
 Implementing winsen portofolio website design into real functional website. His passion for design is immense, he have been designing a lot of projects, from web design to product design.

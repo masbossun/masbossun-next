@@ -36,7 +36,7 @@ const Page: NextPage<Props> = ({ post }) => {
         {post.title}
       </h1>
       <span className="text-black-primary dark:text-white-primary font-monospace font-medium text-xs opacity-50">
-        {JSON.parse(post?.category?.replaceAll("'", '"') ?? "").join(", ")}
+        {post?.category}
       </span>
       <div
         className="prose md:prose-lg dark:prose-dark max-w-none my-8"

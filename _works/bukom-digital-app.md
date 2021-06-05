@@ -1,7 +1,7 @@
 ---
 title: Bukom Digital App
 slug: bukom-digital-app
-category: "['UI Design', 'App Development']"
+category: "UI Design, App Development"
 ---
 
 Application as a means for parents to communicate with teachers in kindergarten schools. School news, daily activities of students at school, and monthly reports can be accessed easily using the digital book application.

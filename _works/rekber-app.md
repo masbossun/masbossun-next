@@ -1,7 +1,7 @@
 ---
 title: Rekber App
 slug: rekber-app
-category: "['UI Design']"
+category: "UI Design"
 ---
 
 This is my new project about transaction app called Rekber (Rekening Bersama). Inspired by my friend's ideas about his experiences on selling and buying game items online. It has features like chat, forum, and transaction built-in.
