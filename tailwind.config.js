@@ -45,7 +45,14 @@ module.exports = {
               textAlign: "center",
             },
             a: {
-              color: theme("colors.accent-primary"),
+              color: "inherit",
+              transitionTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+              transitionDuration: "500ms",
+              transitionProperty: "color",
+              "&:hover": {
+                color: theme("colors.accent-primary"),
+                textDecoration: "none",
+              },
             },
             "code::before": {
               content: "none",
@@ -89,7 +96,9 @@ module.exports = {
               color: theme("colors.white-primary"),
             },
             a: {
-              color: theme("colors.accent-secondary"),
+              "&:hover": {
+                color: theme("colors.accent-secondary"),
+              },
             },
             h1: {
               color: theme("colors.white-primary"),
