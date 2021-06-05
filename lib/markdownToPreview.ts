@@ -7,6 +7,6 @@ export default async function markdownToPreview(markdown: string) {
   const preview = result.toString().match(/<p>(.*?)<\/p>/g);
   const strips = await remark()
     .use(strip)
-    .process(preview?.join("") ?? "");
+    .process(preview?.join("<p> </p>") ?? "");
   return String(strips).substring(0, 1000);
 }
