@@ -59,9 +59,9 @@ const NavLinks: FC = () => {
       <NavLink href="/blog" className="mr-2">
         blog
       </NavLink>
-      <NavLink href="/works" className="mr-2">
+      {/* <NavLink href="/works" className="mr-2">
         works
-      </NavLink>
+      </NavLink> */}
       <NavLink href="/contacts" className="mr-2">
         contacts
       </NavLink>
@@ -122,12 +122,12 @@ const NavMenu = () => {
           >
             <h1>blog</h1>
           </a>
-          <a
+          {/* <a
             href="/works"
             className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary py-4"
           >
             <h1>works</h1>
-          </a>
+          </a> */}
           <a
             href="/contacts"
             className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary py-4"

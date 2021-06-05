@@ -28,28 +28,28 @@ export default function Home() {
           As a software developer, ryan does his works with passion
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <WorkImages>
+          <WorkImages href="/work/rekber-app">
             <img
               src="/images/works/works-rekber.webp"
               alt="rekber"
               srcSet="/images/works/works-rekber.webp, /images/works/works-rekber@2x.webp 2x, /images/works/works-rekber@3x.webp 3x"
             />
           </WorkImages>
-          <WorkImages>
+          <WorkImages href="/work/winsen-xyz">
             <img
               src="/images/works/works-winsen.webp"
               alt="winsen"
               srcSet="/images/works/works-winsen.webp, /images/works/works-winsen@2x.webp 2x, /images/works/works-winsen@3x.webp 3x"
             />
           </WorkImages>
-          <WorkImages>
+          <WorkImages href="/work/bukom-digital-app">
             <img
               src="/images/works/works-bukom-digital.webp"
               alt="bukom-digital"
               srcSet="/images/works/works-bukom-digital.webp, /images/works/works-bukom-digital@2x.webp 2x, /images/works/works-bukom-digital@3x.webp 3x"
             />
           </WorkImages>
-          <WorkImages>
+          <WorkImages href="/work/quran-app">
             <img
               src="/images/works/works-hijrah.webp"
               alt="hijrah"
@@ -82,9 +82,9 @@ export default function Home() {
   );
 }
 
-const WorkImages: FC = ({ children }) => {
+const WorkImages: FC<{ href: string }> = ({ children, href }) => {
   return (
-    <a href="/works" className="group">
+    <a href={href} className="group">
       <div className="aspect-w-1 aspect-h-1 bg-white-secondary dark:bg-black-secondary overflow-hidden transition duration-700 ease-out group-hover:bg-accent-primary dark:group-hover:bg-accent-secondary">
         <div className="transform transition duration-1000 ease-out group-hover:scale-105 group-hover:translate-x-3 group-hover:-translate-y-1">
           {children}
