@@ -66,10 +66,16 @@ const NavLinks: FC = () => {
         contacts
       </NavLink>
       <button
-        className=" text-black-primary dark:text-white-primary"
+        className="text-black-primary transition ease-out hover:bg-accent-primary p-2 rounded-none hover:text-white-primary dark:hover:bg-accent-secondary dark:text-white-primary dark:hover:text-black-primary"
         onClick={toggleColorMode}
       >
-        <Icon icon={icon} height={20} width={20} className="h-5 w-5" />
+        <Icon
+          icon={icon}
+          height={20}
+          width={20}
+          className="h-5 w-5"
+          style={{ margin: 2.5 }}
+        />
       </button>
     </div>
   );

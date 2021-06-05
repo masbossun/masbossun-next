@@ -83,6 +83,13 @@ module.exports = {
             "figure > img": {
               width: "100%",
             },
+            p: {
+              lineHeight: "2rem",
+            },
+            hr: {
+              marginLeft: "5rem",
+              marginRight: "5rem",
+            },
           },
         },
         dark: {

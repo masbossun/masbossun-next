@@ -15,9 +15,10 @@ const Icon: FC<{
   className?: SVGAttributes<SVGSVGElement>["className"];
   width: number;
   height: number;
-}> = ({ icon, className, width, height }) => {
+  style?: SVGAttributes<SVGAElement>["style"];
+}> = ({ icon, className, width, height, style }) => {
   return (
-    <svg className={`fill-current ${className}`}>
+    <svg className={`fill-current ${className}`} style={style}>
       <use
         xlinkHref={`/images/icons.svg#${icon}`}
         width={width}
