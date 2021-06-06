@@ -64,16 +64,15 @@ export default function Home() {
             does frontend development for the web and also for mobile app. Quite
             familiar with react environment such as{" "}
             <a href="https://reactjs.org">react js</a> and{" "}
-            <a href="https://reactnative.dev">react native</a>. Not tied to
-            exact same development or environment, he can explore another
-            framework and works with it if needed.
+            <a href="https://reactnative.dev">react native</a>. He can explore
+            another framework and works with it if needed.
           </p>
           <p>
-            For him programming is how he expresses his feelings. In the
-            meantime, he wrote some stuff on his <a href="/blog">blog</a>. Just
-            to keep his memory sharp, in case he needs it in the future. He has
-            a great interest in learning and building something new. If you are
-            interested, feel free to <a href="/contacts">contact</a> him.
+            In the meantime, he wrote some stuff on his <a href="/blog">blog</a>
+            . Just to keep his memory sharp, in case he needs it in the future.
+            He has a great interest in learning and building something new. If
+            you are interested, feel free to <a href="/contacts">contact</a>{" "}
+            him.
           </p>
         </div>
       </main>
