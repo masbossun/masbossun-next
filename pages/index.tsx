@@ -28,18 +28,18 @@ export default function Home() {
           As a software developer, ryan does his works with passion
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <WorkImages href="/work/rekber-app">
-            <img
-              src="/images/works/works-rekber.webp"
-              alt="rekber"
-              srcSet="/images/works/works-rekber.webp, /images/works/works-rekber@2x.webp 2x, /images/works/works-rekber@3x.webp 3x"
-            />
-          </WorkImages>
           <WorkImages href="/work/winsen-xyz">
             <img
               src="/images/works/works-winsen.webp"
               alt="winsen"
               srcSet="/images/works/works-winsen.webp, /images/works/works-winsen@2x.webp 2x, /images/works/works-winsen@3x.webp 3x"
+            />
+          </WorkImages>
+          <WorkImages href="/work/rekber-app">
+            <img
+              src="/images/works/works-rekber.webp"
+              alt="rekber"
+              srcSet="/images/works/works-rekber.webp, /images/works/works-rekber@2x.webp 2x, /images/works/works-rekber@3x.webp 3x"
             />
           </WorkImages>
           <WorkImages href="/work/waruung-app">
