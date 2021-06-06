@@ -42,11 +42,11 @@ export default function Home() {
               srcSet="/images/works/works-winsen.webp, /images/works/works-winsen@2x.webp 2x, /images/works/works-winsen@3x.webp 3x"
             />
           </WorkImages>
-          <WorkImages href="/work/bukom-digital-app">
+          <WorkImages href="/work/waruung-app">
             <img
-              src="/images/works/works-bukom-digital.webp"
+              src="/images/works/works-waruung.webp"
               alt="bukom-digital"
-              srcSet="/images/works/works-bukom-digital.webp, /images/works/works-bukom-digital@2x.webp 2x, /images/works/works-bukom-digital@3x.webp 3x"
+              srcSet="/images/works/works-waruung.webp, /images/works/works-waruung@2x.webp 2x, /images/works/works-waruung@3x.webp 3x"
             />
           </WorkImages>
           <WorkImages href="/work/quran-app">

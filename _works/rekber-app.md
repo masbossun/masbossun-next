@@ -10,6 +10,6 @@ Designed using [Figma](https://www.figma.com), cool illustrations by [Open Peeps
 
 ---
 
-<img alt="Rekber App - 1" src="/images/works/works-rekber-detail-1.jpg" />
-<img alt="Rekber App - 2" src="/images/works/works-rekber-detail-2.jpg" />
-<img alt="Rekber App - 3" src="/images/works/works-rekber-detail-3.jpg" />
+<img alt="Rekber App - 1" src="/images/works/works-rekber-detail-1.webp" srcSet="/images/works/works-rekber-detail-1.webp, /images/works/works-rekber-detail-1@2x.webp 2x, /images/works/works-rekber-detail-1@3x.webp 3x"/>
+<img alt="Rekber App - 2" src="/images/works/works-rekber-detail-2.webp" srcSet="/images/works/works-rekber-detail-2.webp, /images/works/works-rekber-detail-2@2x.webp 2x, /images/works/works-rekber-detail-2@3x.webp 3x"/>
+<img alt="Rekber App - 3" src="/images/works/works-rekber-detail-3.webp" srcSet="/images/works/works-rekber-detail-3.webp, /images/works/works-rekber-detail-3@2x.webp 2x, /images/works/works-rekber-detail-3@3x.webp 3x"/>
