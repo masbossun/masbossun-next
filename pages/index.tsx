@@ -49,7 +49,7 @@ export default function Home() {
               srcSet="/images/works/works-waruung.webp, /images/works/works-waruung@2x.webp 2x, /images/works/works-waruung@3x.webp 3x"
             />
           </WorkImages>
-          <WorkImages href="/work/quran-app">
+          <WorkImages href="/work/hijrah-app">
             <img
               src="/images/works/works-hijrah.webp"
               alt="hijrah"
