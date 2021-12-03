@@ -10,7 +10,7 @@ Javascript has been the most favorite programming language since it can be run o
 
 As a programmer, sometimes we usually work on many projects, and we cannot depends to the same NodeJS version, as a best practice we always have environment for specific project that we have been working on. To achieve those requirements, we need tools to manage the NodeJS version called nvm (Node Version Manager).
 
-# Installing nvm
+## Installing nvm
 
 nvm can be installed via CLI using `curl`
 
@@ -40,11 +40,11 @@ command -v nvm
 
 if the installation is correct, it will prompt `nvm` as a result
 
-# Basic commands
+## Basic commands
 
 Some commands for daily usages. Also something to keep in mind, on nvm there is feature called **alias** to make an alias for specific nodejs version, for example `node` is an alias for latest NodeJS version, `default` is an alias for default NodeJS version, and many more. We also can create a custom alias.
 
-### Installing NodeJS
+##### Installing NodeJS
 
 To install NodeJS we use command `install`
 
@@ -53,7 +53,7 @@ nvm install node  # installing latest nodejs version
 nvm install 16.6.1  # installing specific nodedjs version
 ```
 
-### List NodeJS Versions
+##### List NodeJS Versions
 
 To see the list of NodeJS versions that currently installed on the machine, we can use comand `ls`. But if you want to see list of NodeJS version that currently active on remote, we can use command `ls-remote`.
 
@@ -62,7 +62,7 @@ nvm ls
 nvm ls-remote
 ```
 
-### Switch or use specific NodeJS Version
+##### Switch or use specific NodeJS Version
 
 If we don't specify NodeJS version, nvm will use NodeJS that currently set as the `default` alias. To switch between specifc NodeJS version we can call the `use` command.
 
@@ -74,7 +74,7 @@ nvm use  # using the specific nodejs version provided on .nvmrc file
 
 nvm can detect wether NodeJS version is installed or not, after calling `use` command, ifif there is no NodeJS version installed on the machine, nvm will installing the version and switch to it.
 
-# .nvmrc
+## .nvmrc
 
 We can specify per-project NodeJS version via `.nvmrc` file, as you can see on the example command above, if we already have `.nvmrc` we can call `use` without specify the version, nvm will read the variables inside `.nvmrc`, specific version and alias can be work on this file. This is an example of `.nvmrc`.
 
@@ -82,7 +82,7 @@ We can specify per-project NodeJS version via `.nvmrc` file, as you can see on t
 v16.6.1
 ```
 
-# Auto-use Script
+## Auto-use Script
 
 nvm provides the auto-use script by detecting `.nvmrc` file and performing the `use` command. If you are using **zsh,** edit and put this script into your shell profile
 
