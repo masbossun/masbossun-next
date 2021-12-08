@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>masbossun dev</title>
         <Tags
           desciption="ryan's personal website"
           image={"/images/banner_bossun.jpeg"}

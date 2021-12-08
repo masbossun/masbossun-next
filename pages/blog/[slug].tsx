@@ -34,6 +34,7 @@ const Page: NextPage<Props> = ({ post }) => {
   return (
     <>
       <Head>
+        <title>{post.title} - masbossun.dev</title>
         <Tags
           desciption={post.title ?? "ryan's personal blog"}
           image={"/images/banner_bossun.jpeg"}

@@ -7,6 +7,7 @@ const Contacts = () => {
       <Head>
         <title>contacts — masbossun.dev</title>
       </Head>
+      email: setiagi.ryan@gmail.com
       <header>
         <Navbar />
       </header>

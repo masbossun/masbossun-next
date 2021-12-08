@@ -31,6 +31,7 @@ const Page: NextPage<Props> = ({ post }) => {
   return (
     <>
       <Head>
+        <title>{post.title} - masbossun.dev</title>
         <Tags
           desciption="the work that ryan has been doing lately"
           image={"/images/banner_bossun.jpeg"}

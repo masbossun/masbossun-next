@@ -8,7 +8,6 @@ const Tags: React.FC<{
 }> = (props) => {
   return (
     <>
-      <title>{props.title}</title>
       <meta name="description" content={props.desciption} />
 
       <meta property="og:url" content={props.url} />
