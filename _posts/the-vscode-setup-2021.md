@@ -105,14 +105,14 @@ As i mention earlier on the settings section, i have no activity bar, i hide it 
 
 | Action                | Keyboard Shortcut |
 | --------------------- | ----------------- |
-| View: Show Explorer   | cmd + shift + e   |
-| View: Show Git        | cmd + shift + g   |
-| View: Show Search     | cmd + shift + f   |
-| View: Show Extensions | cmd + shift + x   |
-| Toggle Terminal       | cmd + shift + a   |
-| Toggle Sidebar        | cmd + b           |
-| Go to File...         | cmd + p           |
-| Show all commands     | cmd + shift + p   |
+| View: Show Explorer   | `cmd + shift + e` |
+| View: Show Git        | `cmd + shift + g` |
+| View: Show Search     | `cmd + shift + f` |
+| View: Show Extensions | `cmd + shift + x` |
+| Toggle Terminal       | `cmd + shift + a` |
+| Toggle Sidebar        | `cmd + b`         |
+| Go to File...         | `cmd + p`         |
+| Show all commands     | `cmd + shift + p` |
 
 ### Editor movements
 
@@ -120,8 +120,8 @@ For editor shortcuts, i don't have that many favorites since i use vim keybindin
 
 | Action                      | Keyboard Shortcut | Condition                                                                                     |
 | --------------------------- | ----------------- | --------------------------------------------------------------------------------------------- |
-| Split Editor                | cmd + \           |                                                                                               |
-| Open definition on the side | t                 | editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor && vim.mode == 'Normal' |
+| Split Editor                | `cmd + \`         |                                                                                               |
+| Open definition on the side | `t`               | editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor && vim.mode == 'Normal' |
 
 <figure>
 <img alt="open definition to side" src="/images/post/shortcut-open-to-side.gif" />
@@ -134,8 +134,8 @@ I don't like to have a lot of tabs/editor open, that is why my favorite tabs sho
 
 | Action             | Keyboard Shortcut |
 | ------------------ | ----------------- |
-| Close Tabs/Editor  | cmd + w           |
-| Reopen Closed Tabs | cmd + shift + t   |
+| Close Tabs/Editor  | `cmd + w`         |
+| Reopen Closed Tabs | `cmd + shift + t` |
 
 ### Terminal movements
 
@@ -143,7 +143,7 @@ Same case like tabs, i don't keep my terminal open. I usually toggle terminal to
 
 | Action         | Keyboard Shortcut | Condition                                 |
 | -------------- | ----------------- | ----------------------------------------- |
-| Split Terminal | cmd + \           | terminalFocus && terminalProcessSupported |
+| Split Terminal | `cmd + \`         | terminalFocus && terminalProcessSupported |
 
 ### Vim Keybindings
 
@@ -153,16 +153,16 @@ So, why i use vscode instead of a terminal with vim to code as a daily driver? t
 
 Vim itself has it's own shortcut or keybinding, but these are some of my favorites. Before that, i want to share another things that i like from vim, which is how clever the key combinations were sets, it's like every key combinations have a reason. For example `caw` is the keybinding to change around words, notice that `caw` is the acronym of the actions itself. See, cool right ? It also compatible to work on parentheses like curly braces, round braces, square braces, etc.
 
-| Action                         | Vim Keybinding                         | Condition                                                                                                           |
-| ------------------------------ | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Change around words            | caw                                    | Normal mode, cursor should be placed at the specific word                                                           |
-| Delete around words            | daw                                    | Normal mode, cursor should be placed at the specific word                                                           |
-| Yank(copy) around words        | yaw                                    | Normal mode, cursor should be placed at the specific word                                                           |
-| Delete around parentheses      | the pattern is da parentheses, e.g da{ | Normal mode, cursor should be placed in between curly parentheses, "around" means the parentheses is also included. |
-| Delete inside parentheses      | the pattern is di parentheses, e.g di{ | Normal mode, cursor should be placed in between parentheses, "inside" means only the text inside the parentheses.   |
-| Yank(copy) around parentheses  | the pattern is ya parentheses, e.g ya{ | Normal mode, cursor should be placed in between curly parentheses, "around" means the parentheses is also included. |
-| Yank(copy) inside parentheses  | the pattern is yi parentheses, e.g yi{ | Normal mode, cursor should be placed in between parentheses, "inside" means only the text inside the parentheses.   |
-| Move between parentheses pairs | #                                      | Normal mode, cursor should be placed above the parentheses character                                                |
+| Action                         | Vim Keybinding                             | Condition                                                                                                           |
+| ------------------------------ | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| Change around words            | `caw`                                      | Normal mode, cursor should be placed at the specific word                                                           |
+| Delete around words            | `daw`                                      | Normal mode, cursor should be placed at the specific word                                                           |
+| Yank(copy) around words        | `yaw`                                      | Normal mode, cursor should be placed at the specific word                                                           |
+| Delete around parentheses      | the pattern is `da`-parentheses, e.g `da{` | Normal mode, cursor should be placed in between curly parentheses, "around" means the parentheses is also included. |
+| Delete inside parentheses      | the pattern is `di`-parentheses, e.g `di{` | Normal mode, cursor should be placed in between parentheses, "inside" means only the text inside the parentheses.   |
+| Yank(copy) around parentheses  | the pattern is `ya`-parentheses, e.g `ya{` | Normal mode, cursor should be placed in between curly parentheses, "around" means the parentheses is also included. |
+| Yank(copy) inside parentheses  | the pattern is `yi`-parentheses, e.g `yi{` | Normal mode, cursor should be placed in between parentheses, "inside" means only the text inside the parentheses.   |
+| Move between parentheses pairs | `%`                                        | Normal mode, cursor should be placed above the parentheses character                                                |
 
 <figure>
 <img alt="vim in action" src="/images/post/vim-in-action.gif" />

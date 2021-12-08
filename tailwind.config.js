@@ -132,6 +132,9 @@ module.exports = {
             blockquote: {
               color: theme("colors.white-primary"),
             },
+            th: {
+              color: theme("colors.white-primary"),
+            },
           },
         },
       }),
