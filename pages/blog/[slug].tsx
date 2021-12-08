@@ -8,6 +8,7 @@ import { format, parseISO } from "date-fns";
 import { Footer } from "../../components/footer";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
+import Tags from "../../components/tags";
 
 interface Props {
   post: {
@@ -33,7 +34,12 @@ const Page: NextPage<Props> = ({ post }) => {
   return (
     <>
       <Head>
-        <title>{post.title} — masbossun.dev</title>
+        <Tags
+          desciption={post.title ?? "ryan's personal blog"}
+          image={"/images/banner_bossun.jpeg"}
+          title={`blog - masbossun.dev`}
+          url={`https://www.masbossun.dev/blog/${post.slug}`}
+        />
       </Head>
       <Navbar />
       <h1 className="text-black-primary dark:text-white-primary my-20 md:my-40 max-w-page-title">

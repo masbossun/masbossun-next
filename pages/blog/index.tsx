@@ -4,6 +4,7 @@ import Head from "next/head";
 import { FC } from "react";
 import { Footer } from "../../components/footer";
 import Navbar from "../../components/navbar";
+import Tags from "../../components/tags";
 import { getAllPosts } from "../../lib/api";
 import markdownToPreview from "../../lib/markdownToPreview";
 
@@ -21,7 +22,12 @@ const Page: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>blog — masbossun.dev</title>
+        <Tags
+          desciption="ryan usually write something here"
+          image={"/images/banner_bossun.jpeg"}
+          title={`blog - masbossun.dev`}
+          url={`https://www.masbossun.dev/blog/`}
+        />
       </Head>
       <header>
         <Navbar />

@@ -7,6 +7,7 @@ import Navbar from "../../components/navbar";
 import { Footer } from "../../components/footer";
 import Head from "next/head";
 import { MDXRemote } from "next-mdx-remote";
+import Tags from "../../components/tags";
 
 interface Props {
   post: {
@@ -30,7 +31,12 @@ const Page: NextPage<Props> = ({ post }) => {
   return (
     <>
       <Head>
-        <title>{post.title} — masbossun.dev</title>
+        <Tags
+          desciption="the work that ryan has been doing lately"
+          image={"/images/banner_bossun.jpeg"}
+          title={`${post.title} - masbossun.dev`}
+          url={`https://www.masbossun.dev/work/${post.slug}`}
+        />
       </Head>
       <Navbar />
       <h1 className="text-black-primary dark:text-white-primary my-20 md:my-40 max-w-page-title">
