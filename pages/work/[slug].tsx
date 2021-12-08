@@ -1,6 +1,5 @@
 import type { GetStaticProps, NextPage } from "next";
 import { getAllWorks, getWorksBySlug } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHTML";
 import ErrorPage from "next/error";
 import { useRouter } from "next/router";
 import Navbar from "../../components/navbar";
@@ -13,9 +12,8 @@ interface Props {
   post: {
     title?: string;
     slug?: string;
-    content?: string;
+    content?: any;
     category?: string;
-    mdxSource?: any;
   };
   morePosts: any;
   preview: any;
@@ -47,7 +45,7 @@ const Page: NextPage<Props> = ({ post }) => {
         {post?.category}
       </span>
       <div className="prose md:prose-lg dark:prose-dark max-w-none my-8">
-        <MDXRemote {...post.mdxSource} />
+        <MDXRemote {...post.content} />
       </div>
       <Footer />
     </>
@@ -61,9 +59,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     "content",
     "category",
   ]);
-  const content = await markdownToHtml(work?.content ?? "");
 
-  return { props: { post: { ...work, content } } };
+  return { props: { post: work } };
 };
 
 export const getStaticPaths = async () => {

@@ -13,10 +13,9 @@ type Fields =
   | "author"
   | "title"
   | "preview"
-  | "git"
-  | "mdxSource";
+  | "git";
 
-type WorkFields = "slug" | "content" | "title" | "category" | "mdxSource";
+type WorkFields = "slug" | "content" | "title" | "category";
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -31,7 +30,9 @@ export async function getPostBySlug(
     const fullPath = join(postsDirectory, `${realSlug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
-    const mdxSource = await serialize(content);
+    const mdxSource = await serialize(content, {
+      mdxOptions: { remarkPlugins: [require("remark-prism")] },
+    });
 
     let item: { [K in Fields]?: string } = {};
 
@@ -42,7 +43,7 @@ export async function getPostBySlug(
     }
 
     if (fields.includes("content")) {
-      item = { ...item, content, mdxSource: mdxSource as any };
+      item = { ...item, content: mdxSource as any };
     }
 
     if (fields.includes("preview")) {
@@ -81,7 +82,9 @@ export async function getWorksBySlug(
     const fullPath = join(worksDirectory, `${realSlug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
-    const mdxSource = await serialize(content);
+    const mdxSource = await serialize(content, {
+      mdxOptions: { remarkPlugins: [require("remark-prism")] },
+    });
 
     let item: { [K in WorkFields]?: string } = {};
 
@@ -92,7 +95,7 @@ export async function getWorksBySlug(
     }
 
     if (fields.includes("content")) {
-      item = { ...item, content, mdxSource: mdxSource as any };
+      item = { ...item, content: mdxSource as any };
     }
 
     return item;
