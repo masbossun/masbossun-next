@@ -85,13 +85,18 @@ const BlogPost: FC<{
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  const postsAsync = await getAllPosts([
+    "slug",
+    "title",
+    "date",
+    "author",
+    "preview",
+  ]);
   const posts = await Promise.all(
-    getAllPosts(["slug", "title", "date", "author", "preview"]).map(
-      async (S) => ({
-        ...S,
-        preview: await markdownToPreview(S?.preview ?? ""),
-      })
-    )
+    postsAsync.map(async (S) => ({
+      ...S,
+      preview: await markdownToPreview(S?.preview ?? ""),
+    }))
   );
 
   return { props: { posts } };

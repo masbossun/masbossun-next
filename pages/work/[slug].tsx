@@ -4,9 +4,9 @@ import markdownToHtml from "../../lib/markdownToHTML";
 import ErrorPage from "next/error";
 import { useRouter } from "next/router";
 import Navbar from "../../components/navbar";
-import { format, parseISO } from "date-fns";
 import { Footer } from "../../components/footer";
 import Head from "next/head";
+import { MDXRemote } from "next-mdx-remote";
 
 interface Props {
   post: {
@@ -14,6 +14,7 @@ interface Props {
     slug?: string;
     content?: string;
     category?: string;
+    mdxSource?: any;
   };
   morePosts: any;
   preview: any;
@@ -38,17 +39,16 @@ const Page: NextPage<Props> = ({ post }) => {
       <span className="text-black-primary dark:text-white-primary font-monospace font-medium text-xs opacity-50">
         {post?.category}
       </span>
-      <div
-        className="prose md:prose-lg dark:prose-dark max-w-none my-8"
-        dangerouslySetInnerHTML={{ __html: post.content ?? "" }}
-      />
+      <div className="prose md:prose-lg dark:prose-dark max-w-none my-8">
+        <MDXRemote {...post.mdxSource} />
+      </div>
       <Footer />
     </>
   );
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const work = getWorksBySlug(params?.slug, [
+  const work = await getWorksBySlug(params?.slug, [
     "title",
     "slug",
     "content",

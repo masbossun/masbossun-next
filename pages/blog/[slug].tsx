@@ -7,6 +7,7 @@ import Navbar from "../../components/navbar";
 import { format, parseISO } from "date-fns";
 import { Footer } from "../../components/footer";
 import Head from "next/head";
+import { MDXRemote } from "next-mdx-remote";
 
 interface Props {
   post: {
@@ -16,6 +17,7 @@ interface Props {
     author?: string;
     content?: string;
     git?: string;
+    mdxSource?: any;
   };
   morePosts: any;
   preview: any;
@@ -41,10 +43,10 @@ const Page: NextPage<Props> = ({ post }) => {
         {format(post.date ? parseISO(post.date) : new Date(), "d/M/yyyy")} by{" "}
         {post.author}
       </span>
-      <div
-        className="prose md:prose-lg dark:prose-dark max-w-none my-8"
-        dangerouslySetInnerHTML={{ __html: post.content ?? "" }}
-      />
+      <div className="prose md:prose-lg dark:prose-dark max-w-none my-8">
+        <MDXRemote {...post.mdxSource} />
+      </div>
+
       <h3 className="text-black-primary dark:text-white-primary my-6 p-6 text-center">
         ***
       </h3>
@@ -60,7 +62,7 @@ const Page: NextPage<Props> = ({ post }) => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = getPostBySlug(params?.slug, [
+  const post = await getPostBySlug(params?.slug, [
     "title",
     "slug",
     "content",
