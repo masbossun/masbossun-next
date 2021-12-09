@@ -16,13 +16,13 @@ async function Poster() {
     const author = answer[AUTHOR];
     const slug = title.replace(/\s/g, "-").toLowerCase();
     const date = new Date().toISOString();
-    const git = `https://github.com/masbossun/masbossun-next/blob/main/_posts/${slug}.md`;
+    const git = `https://github.com/masbossun/masbossun-next/blob/main/_posts/${slug}.mdx`;
 
     const content = `---\ntitle: ${title}\ndate: "${date}"\nslug: ${slug}\nauthor: ${author}\ngit: ${git}\n---`;
 
     const contentPretty = prettier.format(content, { parser: "markdown" });
 
-    fs.writeFile(`_posts/${slug}.md`, contentPretty, "utf8", (err) => {
+    fs.writeFile(`_posts/${slug}.mdx`, contentPretty, "utf8", (err) => {
       if (err) throw err;
       console.log(`"${title}" already created`);
     });
