@@ -47,7 +47,7 @@ export async function getPostBySlug(
     }
 
     if (fields.includes("preview")) {
-      item = { ...item, preview: content };
+      item = { ...item, preview: data.preview ?? content };
     }
 
     return item;

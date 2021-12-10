@@ -78,7 +78,7 @@ const BlogPost: FC<{
         <h3>{title}</h3>
       </a>
       <div className="h-6" />
-      <p className="text-black-primary dark:text-white-primary max-w-prose line-clamp-6 leading-8">
+      <p className="text-black-primary dark:text-white-primary max-w-prose line-clamp-2 leading-8">
         {preview}
       </p>
       <div className="h-6" />
