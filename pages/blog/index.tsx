@@ -38,7 +38,7 @@ const Page: NextPage<Props> = ({ posts }) => {
           Ryan usually wrote something here, blog, article, etc, you name it
         </h1>
         <ol>
-          {posts.map((S) => (
+          {posts.map((S, I) => (
             <div key={S?.slug}>
               <BlogPost
                 title={S?.title}
@@ -47,12 +47,14 @@ const Page: NextPage<Props> = ({ posts }) => {
                 href={`/blog/${S?.slug}`}
                 preview={S?.preview}
               />
-              <div className="h-0.5 w-full bg-white-secondary dark:bg-black-secondary" />
+              {I !== posts.length - 1 ? (
+                <div className="h-0.5 w-full bg-white-secondary dark:bg-black-secondary" />
+              ) : null}
             </div>
           ))}
         </ol>
       </main>
-      <div className="h-16" />
+      <div className="h-24" />
       <Footer />
     </>
   );
