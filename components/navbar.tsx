@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { FC, HTMLAttributes, useMemo, useState } from "react";
 import { useColorMode } from "../context/colorMode";
 import useWindowSize from "../hooks/useWindowSize";
@@ -160,10 +161,14 @@ const NavLink: FC<{
   href: string;
   className?: HTMLAttributes<HTMLAnchorElement>["className"];
 }> = ({ children, href, className }) => {
+  const router = useRouter();
+
   return (
     <a
       href={href}
-      className={`py-2 px-4 transition ease-out hover:bg-accent-primary text-black-primary hover:text-white-primary dark:hover:bg-accent-secondary dark:text-white-primary dark:hover:text-black-primary ${className}`}
+      className={`py-2 px-4 transition ease-out hover:bg-accent-primary text-black-primary hover:text-white-primary dark:hover:bg-accent-secondary dark:text-white-primary dark:hover:text-black-primary ${
+        router.asPath.includes(href) ? "underline" : ""
+      } ${className}`}
     >
       <span className="font-monospace font-medium text-base">{children}</span>
     </a>
