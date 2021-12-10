@@ -67,8 +67,7 @@ export default function Home() {
             In the meantime, he wrote some stuff on his <a href="/blog">blog</a>
             . Just to keep his memory sharp, in case he needs it in the future.
             He has a great interest in learning and building something new. If
-            you are interested, feel free to <a href="/contacts">contact</a>{" "}
-            him.
+            you are interested, feel free to contact him.
           </p>
         </div>
       </main>

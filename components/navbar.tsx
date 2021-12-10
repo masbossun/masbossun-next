@@ -62,9 +62,6 @@ const NavLinks: FC = () => {
       {/* <NavLink href="/works" className="mr-2">
         works
       </NavLink> */}
-      <NavLink href="/contacts" className="mr-2">
-        contacts
-      </NavLink>
       <button
         className="text-black-primary transition ease-out hover:bg-accent-primary p-2 rounded-none hover:text-white-primary dark:hover:bg-accent-secondary dark:text-white-primary dark:hover:text-black-primary"
         onClick={toggleColorMode}
@@ -134,12 +131,6 @@ const NavMenu = () => {
           >
             <h1>works</h1>
           </a> */}
-          <a
-            href="/contacts"
-            className="self-stretch focus:outline-none focus:underline text-black-primary dark:text-white-primary py-4"
-          >
-            <h1>contacts</h1>
-          </a>
           <button
             className="self-stretch text-left text-black-primary dark:text-white-primary py-4"
             onClick={toggleColorMode}
