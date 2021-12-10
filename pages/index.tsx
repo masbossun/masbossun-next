@@ -23,12 +23,13 @@ export default function Home() {
         <h1 className="text-black-primary dark:text-white-primary my-20 md:my-40 max-w-page-title">
           As a software developer, ryan does his works with passion
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <WorkImages href="/work/winsen-xyz">
             <img
               src="/images/works/works-winsen.webp"
               alt="winsen"
               srcSet="/images/works/works-winsen.webp, /images/works/works-winsen@2x.webp 2x, /images/works/works-winsen@3x.webp 3x"
+              className="h-full"
             />
           </WorkImages>
           <WorkImages href="/work/rekber-app">
@@ -36,6 +37,7 @@ export default function Home() {
               src="/images/works/works-rekber.webp"
               alt="rekber"
               srcSet="/images/works/works-rekber.webp, /images/works/works-rekber@2x.webp 2x, /images/works/works-rekber@3x.webp 3x"
+              className="h-full"
             />
           </WorkImages>
           <WorkImages href="/work/waruung-app">
@@ -43,6 +45,7 @@ export default function Home() {
               src="/images/works/works-waruung.webp"
               alt="bukom-digital"
               srcSet="/images/works/works-waruung.webp, /images/works/works-waruung@2x.webp 2x, /images/works/works-waruung@3x.webp 3x"
+              className="h-full"
             />
           </WorkImages>
           <WorkImages href="/work/hijrah-app">
@@ -50,6 +53,7 @@ export default function Home() {
               src="/images/works/works-hijrah.webp"
               alt="hijrah"
               srcSet="/images/works/works-hijrah.webp, /images/works/works-hijrah@2x.webp 2x, /images/works/works-hijrah@3x.webp 3x"
+              className="h-full"
             />
           </WorkImages>
         </div>
