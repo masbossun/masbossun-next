@@ -7,9 +7,9 @@ git: https://github.com/masbossun/masbossun-next/blob/main/_posts/basic-nvm-node
 preview:
 ---
 
-Javascript has been the most favorite programming language since it can be run outside web browser thanks to NodeJS. Like any other programming language, javascript and NodeJS is also evolving that come with a new features and fixes.
+Javascript has been the most favourite programming language since it can be run outside web browsers thanks to NodeJS. Like any other programming language, javascript and NodeJS is also evolving that comes with new features and fixes.
 
-As a programmer, sometimes we usually work on many projects, and we cannot depends to the same NodeJS version, as a best practice we always have environment for specific project that we have been working on. To achieve those requirements, we need tools to manage the NodeJS version called nvm (Node Version Manager).
+As a programmer, sometimes we usually work on many projects, and we cannot depend on the same NodeJS version, as a best practice, we always have an environment for specific projects that we have been working on. To achieve those requirements, we need tools to manage the NodeJS version called nvm (Node Version Manager).
 
 ## Installing nvm
 
@@ -43,11 +43,11 @@ if the installation is correct, it will prompt `nvm` as a result
 
 ## Basic commands
 
-Some commands for daily usages. Also something to keep in mind, on nvm there is feature called **alias** to make an alias for specific nodejs version, for example `node` is an alias for latest NodeJS version, `default` is an alias for default NodeJS version, and many more. We also can create a custom alias.
+Some commands for daily usages. Also, something to keep in mind, on nvm there is a feature called **alias** to make an alias for a specific nodejs version, for example, `node` is an alias for the latest NodeJS version, `default` is an alias for the default NodeJS version and many more. We also can create a custom alias.
 
 ##### Installing NodeJS
 
-To install NodeJS we use command `install`
+To install NodeJS we use the command `install`
 
 ```bash
 nvm install node  # installing latest nodejs version
@@ -56,7 +56,7 @@ nvm install 16.6.1  # installing specific nodedjs version
 
 ##### List NodeJS Versions
 
-To see the list of NodeJS versions that currently installed on the machine, we can use comand `ls`. But if you want to see list of NodeJS version that currently active on remote, we can use command `ls-remote`.
+To see the list of NodeJS versions that are currently installed on the machine, we can use command `ls`. But if you want to see a list of NodeJS versions that are currently active on remote, we can use the command `ls-remote`.
 
 ```bash
 nvm ls
@@ -65,7 +65,7 @@ nvm ls-remote
 
 ##### Switch or use specific NodeJS Version
 
-If we don't specify NodeJS version, nvm will use NodeJS that currently set as the `default` alias. To switch between specifc NodeJS version we can call the `use` command.
+If we don't specify the NodeJS version, nvm will use NodeJS that currently set as the `default` alias. To switch between specific NodeJS versions we can call the `use` command.
 
 ```bash
 nvm use node  # using latest nodejs version
@@ -73,7 +73,7 @@ nvm use 16.6.1  # using specific nodejs version
 nvm use  # using the specific nodejs version provided on .nvmrc file
 ```
 
-nvm can detect wether NodeJS version is installed or not, after calling `use` command, ifif there is no NodeJS version installed on the machine, nvm will installing the version and switch to it.
+nvm can detect whether NodeJS version is installed or not, after calling `use` command, if there is no NodeJS version installed on the machine, nvm will installing the version and switch to it.
 
 ## .nvmrc
 
@@ -113,4 +113,4 @@ load-nvmrc
 
 for another shell, you can see another integration at the official nvm documentation [here](https://github.com/nvm-sh/nvm#deeper-shell-integration).
 
-I think that is all for basic nvm, for more information you can always rely the official documentation. As i mention earlier on this post, nvm is the proper way to install and manage NodeJS versions on the same machine, from basic to advance feature that it gives should be enough for such scenario.
+I think that is all for basic nvm, for more information you can always rely on the official documentation. As I mentioned earlier in this post, nvm is the proper way to install and manage NodeJS versions on the same machine, from basic to advance features that it gives should be enough for such a scenario.
