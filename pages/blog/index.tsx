@@ -85,7 +85,7 @@ const BlogPost: FC<{
       </p>
       <div className="h-6" />
       <a href={href ?? "#"}>
-        <div className="inline-flex bg-accent-primary dark:bg-accent-secondary text-white-secondary dark:text-white-primary py-3 px-4 rounded-none font-monospace font-medium italic text-sm">
+        <div className="inline-flex bg-accent-primary dark:bg-accent-secondary text-white-secondary dark:text-white-primary py-3 px-4 rounded-none font-monospace font-medium text-sm">
           read more
         </div>
       </a>

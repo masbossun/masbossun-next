@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           <div className="flex flex-col">
             <div className="py-4">
-              <span className="font-monospace italic text-xs text-black-primary dark:text-white-primary opacity-50">
+              <span className="font-monospace text-xs text-black-primary dark:text-white-primary opacity-50">
                 Contacts
               </span>
             </div>
@@ -26,7 +26,7 @@ export const Footer = () => {
           </div>
           <div className="flex flex-col">
             <div className="py-4">
-              <span className="font-monospace italic text-xs text-black-primary dark:text-white-primary opacity-50">
+              <span className="font-monospace text-xs text-black-primary dark:text-white-primary opacity-50">
                 Socials
               </span>
             </div>
@@ -35,7 +35,7 @@ export const Footer = () => {
           </div>
           <div className="flex flex-col">
             <div className="py-4">
-              <span className="font-monospace italic text-xs text-black-primary dark:text-white-primary opacity-50">
+              <span className="font-monospace text-xs text-black-primary dark:text-white-primary opacity-50">
                 Others
               </span>
             </div>
