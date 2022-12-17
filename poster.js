@@ -26,7 +26,10 @@ async function Poster() {
     const author = answer[AUTHOR];
     const preview = answer[PREVIEW] ?? "";
 
-    const slug = title.replace(/\s/g, "-").toLowerCase();
+    const slug = title
+      .replace(/\s/g, "-")
+      .replace(/[^a-z0-9]/gi, "_")
+      .toLowerCase();
     const date = new Date().toISOString();
     const git = `https://github.com/masbossun/masbossun-next/blob/main/_posts/${slug}.mdx`;
 
