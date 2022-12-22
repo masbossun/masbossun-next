@@ -59,19 +59,20 @@ export default function Home() {
         </div>
         <div className="my-20 md:my-40 prose md:prose-lg dark:prose-dark max-w-none">
           <p>
-            His name is Ryan Setiagi, he currently working as a full-time mobile
-            developer at <a href="https://rukita.co">rukita</a>. basically, he
-            does frontend development for the web and also for mobile app. Quite
-            familiar with react environment such as{" "}
+            Ryan is a full-time mobile developer at{" "}
+            <a href="https://rukita.co">rukita</a>, where he specializes in
+            frontend development for the web and mobile app using{" "}
             <a href="https://reactjs.org">react js</a> and{" "}
-            <a href="https://reactnative.dev">react native</a>. He can explore
-            another framework and works with it if needed.
+            <a href="https://reactnative.dev">react native</a>. He is proficient
+            in these frameworks and is also able to learn and work with other
+            technologies as needed.
           </p>
           <p>
-            In the meantime, he wrote some stuff on his <a href="/blog">blog</a>
-            . Just to keep his memory sharp, in case he needs it in the future.
-            He has a great interest in learning and building something new. If
-            you are interested, feel free to contact him.
+            In his spare time, Ryan maintains a blog where he writes about
+            various topics to keep his skills sharp. He is constantly seeking
+            new opportunities to learn and build new things. If you have an
+            interesting project or idea that you&apos;d like to discuss with
+            him, don&apos;t hesitate to reach out to him.
           </p>
         </div>
       </main>
