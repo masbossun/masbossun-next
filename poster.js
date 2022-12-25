@@ -28,7 +28,7 @@ async function Poster() {
 
     const slug = title
       .replace(/\s/g, "-")
-      .replace(/[^a-z0-9]/gi, "_")
+      .replace(/[^a-z0-9-]/gi, "_")
       .toLowerCase();
     const date = new Date().toISOString();
     const git = `https://github.com/masbossun/masbossun-next/blob/main/_posts/${slug}.mdx`;

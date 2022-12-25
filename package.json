@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "prepare": "husky install",
+    "lint": "eslint --cache --cache-location '../.eslintcache/'",
     "lint:fix": "eslint --cache --cache-location '../.eslintcache/' --fix",
     "poster": "node ./poster.js"
   },
@@ -49,7 +50,7 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": "eslint --cache --cache-location '../.eslintcache/' --fix",
-    "*.{js,ts,jsx,tsx,css,md}": "prettier --write"
+    "*.{js,ts,jsx,tsx,css,md}": "prettier --write",
+    "*.{js,ts,jsx,tsx}": "eslint --cache --cache-location '../.eslintcache/' --fix"
   }
 }
