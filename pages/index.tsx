@@ -68,11 +68,11 @@ export default function Home() {
             technologies as needed.
           </p>
           <p>
-            In his spare time, Ryan maintains a blog where he writes about
-            various topics to keep his skills sharp. He is constantly seeking
-            new opportunities to learn and build new things. If you have an
-            interesting project or idea that you&apos;d like to discuss with
-            him, don&apos;t hesitate to reach out to him.
+            In his spare time, Ryan maintains a <a href="/blog">blog</a> where
+            he writes about various topics to keep his skills sharp. He is
+            constantly seeking new opportunities to learn and build new things.
+            If you have an interesting project or idea that you&apos;d like to
+            discuss with him, don&apos;t hesitate to reach out to him.
           </p>
         </div>
       </main>
