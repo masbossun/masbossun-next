@@ -1,9 +1,9 @@
 ---
-title: Learn iOS Development 10/100 - About Swift Struct
+title: About Swift Struct
 date: "2022-12-26T14:57:44.919Z"
-slug: learn-ios-development-10_100---about-swift-struct
+slug: about-swift-struct
 author: Ryan Setiagi
-git: https://github.com/masbossun/masbossun-next/blob/main/_posts/learn-ios-development-10_100---about-swift-struct.mdx
+git: https://github.com/masbossun/masbossun-next/blob/main/_posts/about-swift-struct.mdx
 preview:
 ---
 
@@ -33,7 +33,7 @@ struct People {
   // properties
   var name = "Joy"
   var age = 24
-  
+
   // method
   func greeting() {
     print("Hello \(name)"
@@ -59,6 +59,7 @@ somePeople.name = "Boy"
 somePeople.greeting() // Will print "Hello Boy"
 anotherPeople.greeting() // Will print "Hello Joy"
 ```
+
 Struct types automatically receive a _memberwise initializer_, which means struct instance can be initialized automatically without writing any additional initializer. Initial value of the properties on the new instance will be passed to the memberwise initializer by name.
 
 ```swift
@@ -69,7 +70,7 @@ print(joy.name) // Will print "Joy"
 print(boy.name) // will print "Boy"
 ```
 
-Unlike class that is a _Reference Type, struct is a _Value Type_ which has a technique called _copy on write_ means it only copies data whenever it changed. 
+Unlike class that is a _Reference Type, struct is a \_Value Type_ which has a technique called _copy on write_ means it only copies data whenever it changed.
 
 ```swift
 let boy = People(name: "Boy", age: 21)
@@ -87,7 +88,6 @@ print(boyCopy.age) // will print 24
 - [Properties](https://docs.swift.org/swift-book/LanguageGuide/Properties.html)
 - [Methods](https://docs.swift.org/swift-book/LanguageGuide/Methods.html)
 - [Protocols](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)
-
 
 ## References
 
